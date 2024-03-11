@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Recognition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FF6B6B, #FF9A6B, #FFD56B); /* Vibrant gradient background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* White text color */
+            font-size: 2.5em; /* Larger font size */
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the form */
+            border-radius: 15px; /* Rounded corners for the form */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            padding: 30px;
+            width: 350px; /* Wider form for better visual appeal */
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px; /* More spacing between labels */
+            font-weight: bold; /* Make labels stand out */
+            color: #333; /* Slightly darker text */
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 25px; /* More spacing between input and submit */
+            width: 100%;
+            padding: 15px; /* Larger input field */
+            border: 2px solid #FF6B6B; /* Bold border */
+            border-radius: 10px;
+            background-color: #fff; /* White background for input */
+            color: #333; /* Slightly darker text */
+            font-size: 1.2em; /* Larger font size */
+        }
+
+        input[type="submit"] {
+            background-color: #FF6B6B; /* Bold, contrasting button color */
+            color: #fff;
+            padding: 15px 25px; /* Larger button size */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold; /* Make the text bold */
+            text-transform: uppercase; /* Uppercase text for the button */
+            font-size: 1.2em; /* Larger font size */
+            letter-spacing: 2px; /* Increased letter spacing */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF4A4A; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Digit Recognition</h1>
+    <form method="POST" action="/predict1" enctype="multipart/form-data">
+        <label for="image">Choose an image to predict:</label>
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Predict Output">
+    </form>
+</body>
+</html>

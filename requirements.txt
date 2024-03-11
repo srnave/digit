@@ -1,0 +1,2 @@
+first create template folder
+second create uploads folder
